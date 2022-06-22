@@ -1,0 +1,34 @@
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    /* background-color: blueviolet; */
+    justify-content: flex-end;
+    /* color: white; */
+   
+}
+ li{
+    list-style-type: none;
+    padding: 1rem;
+    text-decoration: none;
+}
+a{
+    /* color: white; */
+    text-decoration: none;
+    font-size: 1.5rem;
+
+}
+link:active{
+    color: black;
+}
+
+ul h1{
+    margin-right: 40rem;
+    color: blue;
+    padding-top: 1rem;
+}
+
+h2{
+    margin-right: 10rem;
+    
+}
