@@ -1,3 +1,3 @@
-const api = `https://rickandmortyapi.com/api/character`;
+const api = "https://rickandmortyapi.com/api/character";
 
 export default api;

@@ -9,11 +9,11 @@ import {useDispatch,useSelector} from "react-redux";
 import { addFavorite,removeFavorite } from "../redux/features/favoriteSlice";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
-export default function CharacterCard({data}) {
+export default function FavoriteCard({data}) {
 
   const dispatch = useDispatch();
   const favorite = useSelector((state) => state.favoriteList);
-  // console.log(favorite);
+  console.log(data);
   const [isFavourite, setIsFavourite] = React.useState(
     favorite.favorites.some((f) => f.id === data.id) || false
   );
@@ -28,7 +28,7 @@ export default function CharacterCard({data}) {
   };
   // console.log(props.data.name);
   return (
-    <Card sx={{ maxWidth: 400 ,height:450 }} style={{boxShadow: " 0 20px 25px rgba(0,0,0,0.55)"}} >
+    <Card sx={{ maxWidth: 400 ,height:500 }}>
        {isFavourite ? (
               <IconButton style={{ float: "right" }} onClick={handleDeselect}>
                 <FavoriteIcon color="error" />
