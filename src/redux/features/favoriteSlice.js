@@ -3,8 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   favorites: [],
   loading:false,
-  error:null,
-  color:"#959595",
+  error:"",
 };
 
 const favoriteSlice = createSlice({

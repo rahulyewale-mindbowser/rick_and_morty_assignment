@@ -21,3 +21,9 @@ h2{
     margin-right: 10rem;
     
 }
+
+.link-active {
+    color: rgb(247, 213, 194);
+    /* background: orange; */
+    text-decoration: underline;
+  }

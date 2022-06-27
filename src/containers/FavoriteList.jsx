@@ -1,6 +1,6 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import {Grid} from '@material-ui/core';
-import {useDispatch,useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 // import CharacterCard from '../components/CharacterCard';
 import FavoriteCard from '../components/FavoriteCard';
 
@@ -16,7 +16,7 @@ const FavoriteList = () => {
         <Grid container spacing={2}>
             {FavoriteList.map(ele=>{
                 return ( 
-                    <Grid item xl={3} lg={3} md={4} sm={6} xs={12}>{
+                    <Grid item  lg={3} md={6}  xs={12}>{
                         // console.log(ele)
                     }
                         <FavoriteCard key={"card_key"+ele} data={ele} />
@@ -24,7 +24,7 @@ const FavoriteList = () => {
                 )
             })}
         </Grid> : 
-    <h1>items not added to favorite ...</h1>}
+    <h1>No Favorites Added...</h1>}
 </div>
   )
 }

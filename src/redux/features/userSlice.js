@@ -7,6 +7,7 @@ const initialState ={
     loading:false,
     error:"",
     filterChars: {
+      page:1,
       name:"",
       gender:"",
       status:"",
@@ -22,10 +23,10 @@ export const getUsers = createAsyncThunk(
     const state = getState();
     console.log("state", state);
     const filterChars = state.userList.filterChars;
-    console.log("filterChars", filterChars);
+    // console.log(filterChars);
     const response = await axios.get(
       API,
-      { params: filterChars }
+      { params: filterChars}
     );
     return response.data;
   }

@@ -5,8 +5,7 @@ import MenuItem from "@mui/material/MenuItem";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import { getUsers } from "../redux/features/userSlice";
-import { setFilter } from "../redux/features/userSlice"
+import { getUsers,setFilter } from "../redux/features/userSlice";
 const Filter = () => {
   
   const [name, setName] = useState("");
@@ -24,6 +23,7 @@ const Filter = () => {
     setSpecies("");
     setType("");
     const filter = {
+      page:1,
       name:"",
       gender:"",
       status:"",
@@ -78,6 +78,7 @@ const Filter = () => {
                   textAlign:"center",
                   float:'left',
                   font: `bold 1.5rem Poppins, Serif`,
+                  textShadow:"#FC0 1px 0 10px",
                 }}
               >
                 Filter Characters
@@ -86,7 +87,7 @@ const Filter = () => {
                 
                 style={{
                   float: "right",
-                  color: "#000",
+                  color: "#fff",
                   font: `bold 1rem Poppins, Serif`,
                   backgroundColor: "red",
                   padding: "3px 15px 3px 15px",
@@ -124,7 +125,6 @@ const Filter = () => {
                         onChange={(e) => {
                           setName(e.target.value);
                         }}
-                        //   required
                       />
                     </FormControl>
                   </Grid>
