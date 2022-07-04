@@ -44,6 +44,12 @@ export const getUsers = createAsyncThunk(
           ...action.payload,
         };
       },
+      setPage: (state, action) => {
+        state.filterChars = {
+          ...state.filterChars,
+          ...action.payload,
+        };
+      },
     }
     ,
     extraReducers:(builder) => {
@@ -67,5 +73,5 @@ export const getUsers = createAsyncThunk(
     },
     
   })
- export const {setFilter} = userSlice.actions;
+ export const {setFilter,setPage} = userSlice.actions;
   export const userReducer = userSlice.reducer

@@ -6,6 +6,7 @@ import { getUsers } from "../redux/features/userSlice";
 // import { useNavigate } from "react-router-dom";
 import "./cardlist.css";
 import Filter from "../components/Filter";
+import PaginationComp from "../components/Pagination";
 
 function CardList(props) {
 
@@ -20,10 +21,11 @@ function CardList(props) {
 
   return (
 
-    <div style={{ padding: "0 50px" }}  >
+    <div style={{ padding: "0 50px",alignItems:'center' }}  >
       {/* <div style={{float:'left',width:'30%',height:'80vh'}}> */}
 
         <Filter/>
+      
       {/* </div> */}
       {loading ? (
        <h1>Loading ...</h1>
@@ -33,7 +35,7 @@ function CardList(props) {
         <div className="cardlist">
           
             
-          <Grid container spacing={2}>
+          <Grid container spacing={2} alignContent="center">
             {users.results.map((ele) => {
               return (
                 <Grid item xl={3} lg={3} md={4} sm={6} xs={12}>
@@ -41,11 +43,13 @@ function CardList(props) {
                 </Grid>
               );
             })}
-          </Grid>{" "}
+          </Grid>
+          {" "}
         </div>
       ) : (
         <h1>something went wrong ...</h1>
       )}
+        <PaginationComp />
     </div>
   );
 }
