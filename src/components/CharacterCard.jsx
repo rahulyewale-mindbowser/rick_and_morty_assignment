@@ -46,7 +46,7 @@ export default function CharacterCard({data}) {
   src={data.image}
   sx={{ width: 200, height: 200 ,margin:'auto' }}
 />
-{data.status=="Alive"?
+{data.status==="Alive"?
       <Badge style={{position:"absolute",
       top: "20px",
       left: "30px"

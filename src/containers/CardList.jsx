@@ -7,6 +7,7 @@ import { getUsers } from "../redux/features/userSlice";
 import "./cardlist.css";
 import Filter from "../components/Filter";
 import PaginationComp from "../components/Pagination";
+import Variants from "../components/cardSkeleton";
 
 function CardList(props) {
 
@@ -28,7 +29,9 @@ function CardList(props) {
       
       {/* </div> */}
       {loading ? (
-       <h1>Loading ...</h1>
+       <h1>Loading ...
+        <Variants/>
+       </h1>
       ) : error ? (
         <h2>{error}</h2>
       ) : !loading && userList?.users?.results?.length ? (

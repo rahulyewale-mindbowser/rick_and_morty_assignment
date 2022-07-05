@@ -33,7 +33,7 @@ export default function FavoriteCard({ data }) {
   // console.log(props.data.name);
   return (
     <Card sx={{ maxWidth: 400, height: 400, position: "relative" }}>
-      {data.status == "Alive" ? (
+      {data.status === "Alive" ? (
         <Badge
           style={{ position: "absolute", top: "20px", left: "30px" }}
           badgeContent={`${data.status}`}
