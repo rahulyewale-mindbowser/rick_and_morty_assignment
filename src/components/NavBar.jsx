@@ -52,7 +52,7 @@ const favCount =favList.favorites.length
           >
             <li>
               <NavLink to="/favorite" className={({ isActive }) => (isActive ? "link-active" : "link")}>
-                Favorites {favCount>0 && <span style={{marginLeft:"6px"}}> <Badge badgeContent={favCount} color="success"></Badge></span>}
+                Favorites {favCount>0 && <span style={{marginLeft:"6px"}}> <Badge badgeContent={favCount} color="success" ></Badge></span>}
                 </NavLink>
               
             </li>

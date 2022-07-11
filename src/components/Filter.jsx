@@ -61,7 +61,7 @@ const Filter = () => {
        
         <Grid
           container
-          sx={{ width: "70%", justifyContent: "center", marginBottom: "4rem" }}
+          sx={{ justifyContent: "center", marginBottom: "4rem" }}
         >
           <Grid item xs={12} sm={12} md={12} lg={12}>
             <Paper
